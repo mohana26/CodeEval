@@ -9,7 +9,7 @@ public class FizzBuzz {
 	public static void main(String[] args) throws NumberFormatException,
 			IOException {
 		File file = new File(args[0]);
-		Scanner in = new Scanner(new FileReader(file));
+		Scanner in = new Scanner(file);
 		while (in.hasNextLine()) {
 			String[] lineArray = in.nextLine().split(" ");
 			if (lineArray.length >= 3) {
