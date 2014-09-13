@@ -1,0 +1,39 @@
+import java.util.*; 
+import java.io.*; 
+
+public class ArmstrongNumbers {
+    public static void main(String[] args) throws FileNotFoundException {
+        Scanner in = new Scanner(new File(args[0]));
+        while(in.hasNextLine()) {
+            String line = in.nextLine();
+            if(line.length() > 0) {
+                int num = Integer.parseInt(line);
+                if(armstrong(num, power(num))) {
+                    System.out.print("True");
+                } else {
+                    System.out.print("False");
+                }
+            }
+            System.out.println();
+        }
+    }
+    
+    public static boolean armstrong(int num, int power) {
+        int result = 0;
+        int compare = num;
+        while(compare > 0) {
+            result += Math.pow((compare % 10), power);
+            compare /= 10;
+        }
+        return result == num;
+    }
+    
+    public static int power(int num) {
+        int count = 0;
+        while(num > 0) {
+            num /= 10;
+            count++;
+        }
+        return count;
+    }
+}
