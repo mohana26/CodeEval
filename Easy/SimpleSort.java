@@ -3,7 +3,7 @@ import java.io.*;
 
 public class SimpleSort {
     public static void main(String[] args) throws FileNotFoundException {
-        Scanner in = new Scanner(new File("C:\\Users\\Amrita\\workspace\\Random\\src\\test9")); 
+        Scanner in = new Scanner(new File(args[0])); 
         while(in.hasNextLine()) {
             String line = in.nextLine(); 
             String[] lineArray = line.split(" "); 
