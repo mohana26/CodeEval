@@ -1,3 +1,5 @@
+//Swap elements given the input formatting: # # # # ; i0-i1, i2-i3, etc.
+//Does not work yet. 
 import java.util.*; 
 import java.io.*; 
 
