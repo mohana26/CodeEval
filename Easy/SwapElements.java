@@ -16,6 +16,7 @@ public class SwapElements {
                 if(lineArray[i].equals(":")) {
                     index = i + 1; 
                 }
+                i++;
             }
             for(i = index; i < lineArray.length; i+=2) { //swap
                 int temp = Integer.parseInt(lineArray[Integer.parseInt(lineArray[i])]); 
